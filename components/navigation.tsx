@@ -55,19 +55,19 @@ export function Navigation() {
           >
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
               isScrolled 
-                ? "bg-sky-600" 
+                ? "bg-[#185FAD]" 
                 : "bg-white/20 backdrop-blur-sm"
             }`}>
-              <Volleyball className={`w-5 h-5 ${isScrolled ? "text-white" : "text-white"}`} />
+              <Volleyball className="w-5 h-5 text-white" />
             </div>
             <div className="flex flex-col items-start">
-              <span className={`font-bold text-lg leading-tight transition-colors ${
+              <span className={`font-medium text-lg leading-tight tracking-tight font-[family-name:var(--font-playfair)] transition-colors ${
                 isScrolled ? "text-foreground" : "text-white"
               }`}>
                 Volleyball
               </span>
               <span className={`text-xs font-medium leading-tight transition-colors ${
-                isScrolled ? "text-sky-600" : "text-amber-300"
+                isScrolled ? "text-[#185FAD]" : "text-white/80"
               }`}>
                 with Kelsey
               </span>
@@ -80,7 +80,7 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-sky-600 ${
+                className={`text-[14px] font-medium transition-colors hover:text-[#185FAD] ${
                   isScrolled ? "text-foreground/80" : "text-white/90"
                 }`}
               >
@@ -111,8 +111,13 @@ export function Navigation() {
 
             {/* CTA Button */}
             <Button
+              variant="outline"
               onClick={() => scrollToSection("booking")}
-              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-lg shadow-sky-600/20"
+              className={`font-medium ${
+                isScrolled 
+                  ? "border-[#185FAD] text-[#185FAD] hover:bg-[#185FAD] hover:text-white" 
+                  : "border-white text-white hover:bg-white hover:text-[#185FAD]"
+              }`}
             >
               Book Training
             </Button>
@@ -153,7 +158,7 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 text-base font-medium text-foreground/80 hover:text-sky-600 border-b border-stone-100 dark:border-stone-800"
+                className="block w-full text-left py-3 text-[14px] font-medium text-foreground/80 hover:text-[#185FAD] border-b border-stone-100 dark:border-stone-800"
               >
                 {item.label}
               </button>
@@ -161,8 +166,9 @@ export function Navigation() {
 
             <div className="pt-4">
               <Button
+                variant="outline"
                 onClick={() => scrollToSection("booking")}
-                className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-6"
+                className="w-full border-[#185FAD] text-[#185FAD] hover:bg-[#185FAD] hover:text-white font-medium py-6"
               >
                 Book Training
               </Button>

@@ -3,177 +3,166 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Mediterranean Premium Theme - Volleyball with Kelsey */
-/* Color Palette: Warm Cream, Italian Coastal Blue, Pollen Yellow, Botanical Green */
+/* Matisse Blue Theme - Volleyball with Kelsey */
+/* Inspired by Matisse's Blue Nude II */
+/* Primary: #185FAD (Matisse Blue) with warm cream backgrounds */
 
 :root {
   /* Background & Foreground */
-  --background: oklch(0.99 0.01 85); /* Warm cream white */
-  --foreground: oklch(0.25 0.02 60); /* Warm charcoal text */
+  --background: oklch(0.985 0.005 85); /* Warm cream white */
+  --foreground: oklch(0.20 0.02 250); /* Deep blue-black text */
   
   /* Cards */
   --card: oklch(1 0 0); /* Pure white cards */
-  --card-foreground: oklch(0.25 0.02 60);
+  --card-foreground: oklch(0.20 0.02 250);
   
   /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 60);
+  --popover-foreground: oklch(0.20 0.02 250);
   
-  /* Primary - Mediterranean Blue (Italian Coastal) */
-  --primary: oklch(0.52 0.14 230); /* Azure Mediterranean blue */
+  /* Primary - Matisse Blue #185FAD */
+  --primary: oklch(0.42 0.14 250); /* Matisse Blue */
   --primary-foreground: oklch(0.99 0 0); /* White text */
   
-  /* Secondary - Soft cream */
-  --secondary: oklch(0.97 0.02 85);
-  --secondary-foreground: oklch(0.25 0.02 60);
+  /* Secondary - Very soft cream */
+  --secondary: oklch(0.97 0.01 85);
+  --secondary-foreground: oklch(0.20 0.02 250);
   
   /* Muted */
-  --muted: oklch(0.96 0.01 85);
-  --muted-foreground: oklch(0.50 0.02 60);
+  --muted: oklch(0.96 0.005 85);
+  --muted-foreground: oklch(0.45 0.02 250);
   
-  /* Accent - Pollen Yellow */
-  --accent: oklch(0.82 0.15 85); /* Warm pollen yellow */
-  --accent-foreground: oklch(0.25 0.02 60);
+  /* Accent - Subtle warm (minimal use) */
+  --accent: oklch(0.92 0.04 85);
+  --accent-foreground: oklch(0.20 0.02 250);
   
   /* Destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
   
   /* Borders & Inputs */
-  --border: oklch(0.92 0.02 85);
-  --input: oklch(0.94 0.01 85);
-  --ring: oklch(0.52 0.14 230); /* Blue ring for focus */
+  --border: oklch(0.90 0.01 250);
+  --input: oklch(0.94 0.005 85);
+  --ring: oklch(0.42 0.14 250); /* Matisse Blue ring */
   
-  /* Charts - using the palette */
-  --chart-1: oklch(0.52 0.14 230); /* Mediterranean Blue */
-  --chart-2: oklch(0.82 0.15 85); /* Pollen Yellow */
-  --chart-3: oklch(0.38 0.10 145); /* Botanical Green */
-  --chart-4: oklch(0.65 0.12 230); /* Light Blue */
-  --chart-5: oklch(0.75 0.12 85); /* Soft Yellow */
+  /* Charts */
+  --chart-1: oklch(0.42 0.14 250); /* Matisse Blue */
+  --chart-2: oklch(0.55 0.12 250); /* Lighter Blue */
+  --chart-3: oklch(0.35 0.10 250); /* Darker Blue */
+  --chart-4: oklch(0.65 0.08 250); /* Soft Blue */
+  --chart-5: oklch(0.48 0.12 250); /* Mid Blue */
   
-  --radius: 0.625rem;
+  --radius: 0.5rem;
   
   /* Sidebar */
-  --sidebar: oklch(0.98 0.01 85);
-  --sidebar-foreground: oklch(0.25 0.02 60);
-  --sidebar-primary: oklch(0.52 0.14 230);
+  --sidebar: oklch(0.98 0.005 85);
+  --sidebar-foreground: oklch(0.20 0.02 250);
+  --sidebar-primary: oklch(0.42 0.14 250);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.82 0.15 85);
-  --sidebar-accent-foreground: oklch(0.25 0.02 60);
-  --sidebar-border: oklch(0.92 0.02 85);
-  --sidebar-ring: oklch(0.52 0.14 230);
+  --sidebar-accent: oklch(0.92 0.04 85);
+  --sidebar-accent-foreground: oklch(0.20 0.02 250);
+  --sidebar-border: oklch(0.90 0.01 250);
+  --sidebar-ring: oklch(0.42 0.14 250);
 
-  /* Section gradient variables - Warm premium feel */
-  --section-gradient-start: oklch(0.99 0.01 85);
-  --section-gradient-middle: oklch(0.98 0.02 85);
-  --section-gradient-end: oklch(0.96 0.02 85);
+  /* Section gradients */
+  --section-gradient-start: oklch(0.985 0.005 85);
+  --section-gradient-middle: oklch(0.98 0.005 85);
+  --section-gradient-end: oklch(0.97 0.005 85);
   
-  /* Custom Mediterranean palette colors */
-  --mediterranean-blue: oklch(0.52 0.14 230);
-  --mediterranean-blue-light: oklch(0.65 0.12 230);
-  --pollen-yellow: oklch(0.82 0.15 85);
-  --pollen-yellow-light: oklch(0.90 0.10 85);
-  --botanical-green: oklch(0.38 0.10 145);
-  --botanical-green-light: oklch(0.50 0.08 145);
+  /* Matisse palette */
+  --matisse-blue: oklch(0.42 0.14 250);
+  --matisse-blue-light: oklch(0.55 0.10 250);
 }
 
 .dark {
-  /* Background & Foreground - Deep warm dark */
-  --background: oklch(0.18 0.02 60); /* Deep warm charcoal */
-  --foreground: oklch(0.96 0.01 85); /* Cream white text */
+  /* Background & Foreground */
+  --background: oklch(0.15 0.02 250); /* Deep blue-black */
+  --foreground: oklch(0.96 0.005 85); /* Warm white text */
   
   /* Cards */
-  --card: oklch(0.22 0.02 60);
-  --card-foreground: oklch(0.96 0.01 85);
+  --card: oklch(0.18 0.02 250);
+  --card-foreground: oklch(0.96 0.005 85);
   
   /* Popover */
-  --popover: oklch(0.22 0.02 60);
-  --popover-foreground: oklch(0.96 0.01 85);
+  --popover: oklch(0.18 0.02 250);
+  --popover-foreground: oklch(0.96 0.005 85);
   
-  /* Primary - Mediterranean Blue stays vibrant */
-  --primary: oklch(0.58 0.14 230);
-  --primary-foreground: oklch(0.18 0.02 60);
+  /* Primary - Matisse Blue lighter for dark mode */
+  --primary: oklch(0.55 0.12 250);
+  --primary-foreground: oklch(0.15 0.02 250);
   
   /* Secondary */
-  --secondary: oklch(0.25 0.02 60);
-  --secondary-foreground: oklch(0.96 0.01 85);
+  --secondary: oklch(0.22 0.02 250);
+  --secondary-foreground: oklch(0.96 0.005 85);
   
   /* Muted */
-  --muted: oklch(0.28 0.02 60);
+  --muted: oklch(0.25 0.02 250);
   --muted-foreground: oklch(0.65 0.01 85);
   
-  /* Accent - Pollen Yellow pops in dark */
-  --accent: oklch(0.85 0.15 85);
-  --accent-foreground: oklch(0.18 0.02 60);
+  /* Accent - Subtle warm */
+  --accent: oklch(0.28 0.02 250);
+  --accent-foreground: oklch(0.96 0.005 85);
   
   /* Destructive */
   --destructive: oklch(0.5 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
   
   /* Borders & Inputs */
-  --border: oklch(0.30 0.02 60);
-  --input: oklch(0.28 0.02 60);
-  --ring: oklch(0.58 0.14 230);
+  --border: oklch(0.28 0.02 250);
+  --input: oklch(0.25 0.02 250);
+  --ring: oklch(0.55 0.12 250);
   
   /* Charts */
-  --chart-1: oklch(0.58 0.14 230);
-  --chart-2: oklch(0.85 0.15 85);
-  --chart-3: oklch(0.48 0.10 145);
-  --chart-4: oklch(0.68 0.12 230);
-  --chart-5: oklch(0.78 0.12 85);
+  --chart-1: oklch(0.55 0.12 250);
+  --chart-2: oklch(0.65 0.10 250);
+  --chart-3: oklch(0.45 0.10 250);
+  --chart-4: oklch(0.60 0.08 250);
+  --chart-5: oklch(0.50 0.10 250);
   
   /* Sidebar */
-  --sidebar: oklch(0.20 0.02 60);
-  --sidebar-foreground: oklch(0.96 0.01 85);
-  --sidebar-primary: oklch(0.58 0.14 230);
-  --sidebar-primary-foreground: oklch(0.18 0.02 60);
-  --sidebar-accent: oklch(0.30 0.02 60);
-  --sidebar-accent-foreground: oklch(0.96 0.01 85);
-  --sidebar-border: oklch(0.30 0.02 60);
-  --sidebar-ring: oklch(0.58 0.14 230);
+  --sidebar: oklch(0.18 0.02 250);
+  --sidebar-foreground: oklch(0.96 0.005 85);
+  --sidebar-primary: oklch(0.55 0.12 250);
+  --sidebar-primary-foreground: oklch(0.15 0.02 250);
+  --sidebar-accent: oklch(0.28 0.02 250);
+  --sidebar-accent-foreground: oklch(0.96 0.005 85);
+  --sidebar-border: oklch(0.28 0.02 250);
+  --sidebar-ring: oklch(0.55 0.12 250);
 
-  /* Section gradient variables */
-  --section-gradient-start: oklch(0.18 0.02 60);
-  --section-gradient-middle: oklch(0.20 0.02 60);
-  --section-gradient-end: oklch(0.24 0.02 60);
+  /* Section gradients */
+  --section-gradient-start: oklch(0.15 0.02 250);
+  --section-gradient-middle: oklch(0.17 0.02 250);
+  --section-gradient-end: oklch(0.20 0.02 250);
   
-  /* Custom Mediterranean palette colors - dark mode */
-  --mediterranean-blue: oklch(0.58 0.14 230);
-  --mediterranean-blue-light: oklch(0.68 0.12 230);
-  --pollen-yellow: oklch(0.85 0.15 85);
-  --pollen-yellow-light: oklch(0.90 0.10 85);
-  --botanical-green: oklch(0.48 0.10 145);
-  --botanical-green-light: oklch(0.58 0.08 145);
+  /* Matisse palette - dark mode */
+  --matisse-blue: oklch(0.55 0.12 250);
+  --matisse-blue-light: oklch(0.65 0.10 250);
 }
 
 @theme inline {
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
 
-  /* Mediterranean Premium Palette */
-  --color-background: 255 252 245; /* Warm cream */
-  --color-foreground: 58 51 44; /* Warm charcoal */
-  --color-card: 255 255 255; /* Pure white */
-  --color-card-foreground: 58 51 44;
-  --color-primary: 46 134 171; /* Mediterranean blue */
+  /* Matisse Blue Palette - #185FAD */
+  --color-background: 253 251 247; /* Warm cream */
+  --color-foreground: 24 40 60; /* Deep blue-black */
+  --color-card: 255 255 255;
+  --color-card-foreground: 24 40 60;
+  --color-primary: 24 95 173; /* Matisse Blue #185FAD */
   --color-primary-foreground: 255 255 255;
-  --color-secondary: 250 247 240; /* Soft cream */
-  --color-secondary-foreground: 58 51 44;
-  --color-accent: 233 184 74; /* Pollen yellow */
-  --color-accent-foreground: 58 51 44;
-  --color-muted: 247 244 237;
-  --color-muted-foreground: 128 119 110;
-  --color-border: 237 230 218;
-  --color-input: 237 230 218;
-  --color-ring: 46 134 171; /* Blue focus ring */
+  --color-secondary: 248 246 242;
+  --color-secondary-foreground: 24 40 60;
+  --color-accent: 240 238 234; /* Very subtle warm */
+  --color-accent-foreground: 24 40 60;
+  --color-muted: 245 243 239;
+  --color-muted-foreground: 100 110 130;
+  --color-border: 220 225 235;
+  --color-input: 240 238 234;
+  --color-ring: 24 95 173;
   
-  /* Custom Mediterranean colors */
-  --color-med-blue: 46 134 171;
-  --color-med-blue-light: 91 164 194;
-  --color-pollen: 233 184 74;
-  --color-pollen-light: 242 213 145;
-  --color-botanical: 45 90 61;
-  --color-botanical-light: 75 120 90;
+  /* Matisse blue variations */
+  --color-matisse: 24 95 173;
+  --color-matisse-light: 60 130 190;
 
   --radius: 0.5rem;
 }

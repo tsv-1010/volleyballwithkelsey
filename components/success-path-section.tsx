@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Phone, ClipboardCheck, Trophy, MessageCircle, Target, Calendar } from "lucide-react"
+import { Phone, ClipboardCheck, Trophy, Target } from "lucide-react"
 
 export function SuccessPathSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -16,157 +16,117 @@ export function SuccessPathSection() {
   const steps = [
     {
       number: "01",
-      title: "Assessment Call",
-      description: "We start with a quick call or text to understand your athlete's current level, goals, and what success looks like for your family. No pressure, just conversation.",
+      title: "Connect",
+      description: "Quick call or text to discuss goals and current skill level.",
       icon: Phone,
-      duration: "15-20 min",
     },
     {
       number: "02",
-      title: "Technical Baseline",
-      description: "In our first session, Coach Kelsey assesses your athlete's technical foundation—passing, footwork, hitting mechanics, and court awareness. This creates a personalized development roadmap.",
+      title: "Assess",
+      description: "First session establishes your technical baseline and roadmap.",
       icon: ClipboardCheck,
-      duration: "First session",
     },
     {
       number: "03",
-      title: "Elite Performance",
-      description: "With consistent training, your athlete develops pro-level habits, gains confidence, and elevates their game. Whether the goal is making varsity, earning a college spot, or just loving the sport more—we get there together.",
+      title: "Develop",
+      description: "Consistent training builds confidence and elevates performance.",
       icon: Trophy,
-      duration: "Ongoing development",
     },
   ]
 
   return (
     <section 
       ref={containerRef}
-      className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-stone-50 to-white dark:from-stone-900 dark:to-stone-950"
+      className="py-21 md:py-34 bg-gradient-to-b from-stone-50 to-white dark:from-stone-900 dark:to-stone-950"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 13 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.5 }}
+          className="text-center mb-13"
         >
-          <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
-            Your Journey to Excellence
+          <p className="text-[#185FAD] font-medium text-[13px] uppercase tracking-wider mb-2">
+            The Process
           </p>
-          <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            The Success Path
+          <h2 className="font-[family-name:var(--font-playfair)] text-[34px] md:text-[44px] font-medium tracking-tight text-foreground leading-[1.1]">
+            How It Works
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Know exactly what to expect. Here's how we take your athlete from where they 
-            are to where they want to be.
-          </p>
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-3xl mx-auto">
           {/* Animated Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-stone-200 dark:bg-stone-700 md:-translate-x-1/2">
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-stone-200 dark:bg-stone-700 md:-translate-x-1/2">
             <motion.div 
-              className="w-full bg-gradient-to-b from-sky-600 to-sky-700"
+              className="w-full bg-[#185FAD]"
               style={{ height: lineHeight }}
             />
           </div>
 
           {/* Steps */}
-          <div className="space-y-16 md:space-y-24">
+          <div className="space-y-13">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 21 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative flex items-start gap-8 ${
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className={`relative flex items-start gap-5 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
                 {/* Timeline Node */}
-                <div className={`absolute left-8 md:left-1/2 md:-translate-x-1/2 flex-shrink-0`}>
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 }}
-                    className="w-16 h-16 rounded-full bg-sky-600 flex items-center justify-center shadow-lg shadow-sky-600/30 border-4 border-white dark:border-stone-950"
-                  >
-                    <step.icon className="w-7 h-7 text-white" />
-                  </motion.div>
+                <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#185FAD] flex items-center justify-center border-3 border-white dark:border-stone-950">
+                    <step.icon className="w-5 h-5 text-white" />
+                  </div>
                 </div>
 
                 {/* Content Card */}
-                <div className={`ml-24 md:ml-0 md:w-[calc(50%-4rem)] ${
-                  index % 2 === 0 ? "md:pr-8" : "md:pl-8"
+                <div className={`ml-21 md:ml-0 md:w-[calc(50%-3rem)] ${
+                  index % 2 === 0 ? "md:pr-5" : "md:pl-5"
                 }`}>
-                  <motion.div
-                    whileHover={{ y: -4 }}
-                    className="bg-white dark:bg-stone-800 rounded-2xl p-6 md:p-8 shadow-lg border border-stone-200 dark:border-stone-700"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-4xl font-extrabold text-sky-600/20">
-                        {step.number}
-                      </span>
-                      <span className="text-xs font-semibold text-muted-foreground bg-stone-100 dark:bg-stone-700 px-3 py-1 rounded-full">
-                        {step.duration}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3">
+                  <div className="bg-white dark:bg-stone-800 rounded-xl p-5 border border-border">
+                    <span className="text-[21px] font-medium text-[#185FAD]/30">
+                      {step.number}
+                    </span>
+                    <h3 className="text-[16px] font-medium text-foreground mt-1">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-[14px] text-muted-foreground mt-2">
                       {step.description}
                     </p>
-                  </motion.div>
+                  </div>
                 </div>
 
                 {/* Empty space for alternating layout on desktop */}
-                <div className="hidden md:block md:w-[calc(50%-4rem)]" />
+                <div className="hidden md:block md:w-[calc(50%-3rem)]" />
               </motion.div>
             ))}
           </div>
 
           {/* Final CTA Node */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative mt-16 flex justify-center"
+            transition={{ duration: 0.4 }}
+            className="relative mt-13 flex justify-center"
           >
-            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 -top-8">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-600 to-sky-700 flex items-center justify-center shadow-lg shadow-sky-600/30 border-4 border-white dark:border-stone-950">
-                <Target className="w-7 h-7 text-white" />
+            <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -top-5">
+              <div className="w-12 h-12 rounded-full bg-[#185FAD] flex items-center justify-center border-3 border-white dark:border-stone-950">
+                <Target className="w-5 h-5 text-white" />
               </div>
             </div>
             
-            <div className="ml-24 md:ml-0 md:text-center pt-12">
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                Ready to Start?
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                The journey begins with one simple step.
+            <div className="ml-21 md:ml-0 md:text-center pt-8">
+              <p className="text-[14px] text-muted-foreground">
+                Ready to start? <button onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })} className="text-[#185FAD] hover:underline">Book your first session</button>
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href="#booking"
-                  className="inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Text Kelsey
-                </a>
-                <a
-                  href="#booking"
-                  className="inline-flex items-center justify-center gap-2 border border-stone-300 dark:border-stone-600 hover:bg-stone-100 dark:hover:bg-stone-800 text-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
-                  <Calendar className="w-4 h-4" />
-                  Book a Call
-                </a>
-              </div>
             </div>
           </motion.div>
         </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ChevronDown, Trophy, Target, Zap } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -14,119 +14,84 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-sky-900 via-sky-800 to-sky-900">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.3),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,191,36,0.2),transparent_50%)]" />
-        {/* Court lines pattern */}
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#185FAD]">
+      {/* Subtle Background Pattern - Matisse-inspired organic shapes */}
+      <div className="absolute inset-0 opacity-[0.08]">
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="court-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <path d="M 0 50 L 100 50 M 50 0 L 50 100" stroke="rgba(255,255,255,0.1)" strokeWidth="1" fill="none"/>
+            <pattern id="matisse-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+              <circle cx="50" cy="50" r="40" fill="white" />
+              <circle cx="150" cy="150" r="30" fill="white" />
+              <ellipse cx="100" cy="100" rx="25" ry="40" fill="white" transform="rotate(45 100 100)" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#court-pattern)" />
+          <rect width="100%" height="100%" fill="url(#matisse-pattern)" />
         </svg>
       </div>
 
       <div className="relative z-10 flex h-full min-h-screen flex-col items-center justify-center px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 21 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl"
+          className="max-w-4xl"
         >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 rounded-full bg-amber-400/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-amber-300 border border-amber-400/30 mb-8"
-          >
-            <Trophy className="h-4 w-4" />
-            Northern California Elite Volleyball Training
-          </motion.div>
-
-          {/* Main Headline */}
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl mb-6">
-            Master the Court with{" "}
-            <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
-              Elite Volleyball Coaching
-            </span>
+          {/* Main Headline - Fibonacci scale: 55px base */}
+          <h1 className="font-[family-name:var(--font-playfair)] text-[34px] sm:text-[55px] md:text-[70px] lg:text-[89px] font-medium tracking-tight text-white leading-[1.1] mb-5">
+            Volleyball Coaching:
+            <br />
+            <span className="font-normal">Private Lessons</span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="mt-4 text-lg leading-relaxed text-sky-100 md:text-xl lg:text-2xl max-w-3xl mx-auto">
-            From Southern California standout to Collegiate star, Coach{" "}
-            <span className="text-white font-semibold">Kelsey van Uden</span> brings pro-level 
-            technical training to Petaluma and Santa Rosa.
+          {/* Subheadline - 21px */}
+          <p className="text-[18px] md:text-[21px] font-light text-white/90 mb-8">
+            Gain confidence on the court and in the game
           </p>
 
-          {/* Feature Pills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mt-8"
-          >
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Target className="h-4 w-4 text-amber-400" />
-              Private 1-on-1 Sessions
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Zap className="h-4 w-4 text-amber-400" />
-              Position-Specific Training
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Trophy className="h-4 w-4 text-amber-400" />
-              Collegiate Experience
-            </div>
-          </motion.div>
+          {/* Description - 13px base */}
+          <p className="text-[14px] md:text-[16px] leading-relaxed text-white/70 max-w-2xl mx-auto mb-13">
+            Volleyball with Kelsey breaks down the game from the fundamentals 
+            to advanced collegiate level technical training.
+          </p>
 
-          {/* CTAs */}
+          {/* CTAs - Outlined buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 13 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-13 flex flex-col gap-4 sm:flex-row sm:justify-center"
           >
             <Button
               size="lg"
-              className="bg-amber-400 text-sky-900 hover:bg-amber-300 text-base font-bold px-8 py-6 shadow-lg shadow-amber-400/30 hover:shadow-amber-400/50 transition-all"
+              variant="outline"
+              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#185FAD] text-[14px] font-medium px-8 py-6 transition-all"
               onClick={scrollToBooking}
             >
-              Book Your Training
+              Book a Session
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 text-base font-medium px-8 py-6"
+              className="border-2 border-white/40 bg-transparent text-white/80 hover:border-white hover:text-white text-[14px] font-medium px-8 py-6 transition-all"
               onClick={scrollToAbout}
             >
-              Meet Coach Kelsey
+              Learn More
             </Button>
           </motion.div>
-
-          {/* SEO Keywords (visually subtle but present) */}
-          <p className="mt-8 text-xs text-sky-400/60 max-w-2xl mx-auto">
-            Volleyball Private Lessons Petaluma • Santa Rosa Volleyball Coaching • North Bay Elite Training
-          </p>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
+          transition={{ duration: 1, delay: 0.8 }}
           className="absolute bottom-8"
         >
           <button
             onClick={scrollToAbout}
-            className="flex flex-col items-center text-white/60 hover:text-white transition-colors"
+            className="flex flex-col items-center text-white/50 hover:text-white/80 transition-colors"
           >
-            <span className="text-sm mb-2">Discover More</span>
-            <ChevronDown className="h-6 w-6 animate-bounce" />
+            <ChevronDown className="h-5 w-5 animate-bounce" />
           </button>
         </motion.div>
       </div>
