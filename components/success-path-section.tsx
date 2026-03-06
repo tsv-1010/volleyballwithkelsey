@@ -40,7 +40,7 @@ export function SuccessPathSection() {
   return (
     <section 
       ref={containerRef}
-      className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950"
+      className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-stone-50 to-white dark:from-stone-900 dark:to-stone-950"
     >
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
@@ -51,7 +51,7 @@ export function SuccessPathSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+          <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
             Your Journey to Excellence
           </p>
           <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -66,9 +66,9 @@ export function SuccessPathSection() {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Animated Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700 md:-translate-x-1/2">
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-stone-200 dark:bg-stone-700 md:-translate-x-1/2">
             <motion.div 
-              className="w-full bg-gradient-to-b from-orange-500 to-orange-600"
+              className="w-full bg-gradient-to-b from-sky-600 to-sky-700"
               style={{ height: lineHeight }}
             />
           </div>
@@ -93,7 +93,7 @@ export function SuccessPathSection() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.2 }}
-                    className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/30 border-4 border-white dark:border-slate-950"
+                    className="w-16 h-16 rounded-full bg-sky-600 flex items-center justify-center shadow-lg shadow-sky-600/30 border-4 border-white dark:border-stone-950"
                   >
                     <step.icon className="w-7 h-7 text-white" />
                   </motion.div>
@@ -105,13 +105,13 @@ export function SuccessPathSection() {
                 }`}>
                   <motion.div
                     whileHover={{ y: -4 }}
-                    className="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 shadow-lg border border-slate-200 dark:border-slate-700"
+                    className="bg-white dark:bg-stone-800 rounded-2xl p-6 md:p-8 shadow-lg border border-stone-200 dark:border-stone-700"
                   >
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-4xl font-extrabold text-orange-500/20">
+                      <span className="text-4xl font-extrabold text-sky-600/20">
                         {step.number}
                       </span>
-                      <span className="text-xs font-semibold text-muted-foreground bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-muted-foreground bg-stone-100 dark:bg-stone-700 px-3 py-1 rounded-full">
                         {step.duration}
                       </span>
                     </div>
@@ -139,7 +139,7 @@ export function SuccessPathSection() {
             className="relative mt-16 flex justify-center"
           >
             <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 -top-8">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-500/30 border-4 border-white dark:border-slate-950">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-600 to-sky-700 flex items-center justify-center shadow-lg shadow-sky-600/30 border-4 border-white dark:border-stone-950">
                 <Target className="w-7 h-7 text-white" />
               </div>
             </div>
@@ -154,14 +154,14 @@ export function SuccessPathSection() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="#booking"
-                  className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
                   Text Kelsey
                 </a>
                 <a
                   href="#booking"
-                  className="inline-flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 text-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
+                  className="inline-flex items-center justify-center gap-2 border border-stone-300 dark:border-stone-600 hover:bg-stone-100 dark:hover:bg-stone-800 text-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
                 >
                   <Calendar className="w-4 h-4" />
                   Book a Call

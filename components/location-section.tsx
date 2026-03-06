@@ -16,7 +16,7 @@ export function LocationSection() {
   ]
 
   return (
-    <section id="location" className="py-24 md:py-32 bg-white dark:bg-slate-950">
+    <section id="location" className="py-24 md:py-32 bg-white dark:bg-stone-950">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Map Area */}
@@ -27,7 +27,7 @@ export function LocationSection() {
             transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 shadow-xl">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-900 shadow-xl">
               {/* Stylized Map Background */}
               <div className="absolute inset-0">
                 {/* Grid pattern to simulate map */}
@@ -47,14 +47,14 @@ export function LocationSection() {
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="3" 
-                    className="text-orange-500/40"
+                    className="text-sky-600/40"
                   />
                   <path 
                     d="M 200 50 Q 250 150 200 200 T 200 350" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="3" 
-                    className="text-orange-500/40"
+                    className="text-sky-600/40"
                   />
                   <path 
                     d="M 100 100 Q 200 100 200 200 T 300 300" 
@@ -78,11 +78,11 @@ export function LocationSection() {
                 >
                   {/* Pulse ring */}
                   <div className="absolute inset-0 w-32 h-32 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                    <div className="absolute inset-0 bg-orange-500/20 rounded-full animate-ping" />
+                    <div className="absolute inset-0 bg-sky-600/20 rounded-full animate-ping" />
                   </div>
                   
                   {/* Main circle */}
-                  <div className="relative w-32 h-32 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-xl shadow-orange-500/30">
+                  <div className="relative w-32 h-32 bg-gradient-to-br from-sky-600 to-sky-700 rounded-full flex items-center justify-center shadow-xl shadow-sky-600/30">
                     <div className="text-center text-white">
                       <MapPin className="w-8 h-8 mx-auto mb-1" />
                       <span className="text-xs font-bold uppercase tracking-wider">North Bay</span>
@@ -96,7 +96,7 @@ export function LocationSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className="absolute top-1/4 left-1/4 w-16 h-16 bg-white dark:bg-slate-800 rounded-full shadow-lg flex items-center justify-center border-2 border-orange-500/50"
+                  className="absolute top-1/4 left-1/4 w-16 h-16 bg-white dark:bg-stone-800 rounded-full shadow-lg flex items-center justify-center border-2 border-sky-600/50"
                 >
                   <span className="text-xs font-bold text-foreground">Petaluma</span>
                 </motion.div>
@@ -106,14 +106,14 @@ export function LocationSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="absolute top-1/3 right-1/4 w-20 h-20 bg-white dark:bg-slate-800 rounded-full shadow-lg flex items-center justify-center border-2 border-orange-500/50"
+                  className="absolute top-1/3 right-1/4 w-20 h-20 bg-white dark:bg-stone-800 rounded-full shadow-lg flex items-center justify-center border-2 border-sky-600/50"
                 >
                   <span className="text-xs font-bold text-foreground text-center">Santa<br/>Rosa</span>
                 </motion.div>
               </div>
 
               {/* Region Label */}
-              <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+              <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-stone-800/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
                 <p className="text-xs font-semibold text-foreground">Sonoma County</p>
                 <p className="text-xs text-muted-foreground">Northern California</p>
               </div>
@@ -128,7 +128,7 @@ export function LocationSection() {
             transition={{ duration: 0.6 }}
             className="order-1 lg:order-2"
           >
-            <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+            <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
               Training Locations
             </p>
             <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl mb-6">
@@ -151,12 +151,12 @@ export function LocationSection() {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className={`flex items-center gap-2 p-3 rounded-lg ${
                     area.primary 
-                      ? "bg-orange-500/10 border border-orange-500/30" 
-                      : "bg-slate-100 dark:bg-slate-800 border border-transparent"
+                      ? "bg-sky-600/10 border border-sky-600/30" 
+                      : "bg-stone-100 dark:bg-stone-800 border border-transparent"
                   }`}
                 >
                   <CheckCircle className={`w-4 h-4 flex-shrink-0 ${
-                    area.primary ? "text-orange-500" : "text-green-500"
+                    area.primary ? "text-sky-600" : "text-emerald-600"
                   }`} />
                   <span className={`text-sm ${
                     area.primary ? "font-semibold text-foreground" : "text-muted-foreground"
@@ -169,18 +169,18 @@ export function LocationSection() {
 
             {/* Travel Info */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-xl p-4 flex-1">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Car className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-3 bg-stone-100 dark:bg-stone-800 rounded-xl p-4 flex-1">
+                <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                  <Car className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-sm">Mobile Training</p>
                   <p className="text-xs text-muted-foreground">Can travel to local courts</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 bg-slate-100 dark:bg-slate-800 rounded-xl p-4 flex-1">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-3 bg-stone-100 dark:bg-stone-800 rounded-xl p-4 flex-1">
+                <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground text-sm">Flexible Hours</p>

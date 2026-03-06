@@ -14,11 +14,11 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-sky-900 via-sky-800 to-sky-900">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(249,115,22,0.3),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(249,115,22,0.2),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(251,191,36,0.2),transparent_50%)]" />
         {/* Court lines pattern */}
         <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -42,7 +42,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 rounded-full bg-orange-500/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-orange-400 border border-orange-500/30 mb-8"
+            className="inline-flex items-center gap-2 rounded-full bg-amber-400/20 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-amber-300 border border-amber-400/30 mb-8"
           >
             <Trophy className="h-4 w-4" />
             Northern California Elite Volleyball Training
@@ -51,13 +51,13 @@ export function HeroSection() {
           {/* Main Headline */}
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl mb-6">
             Master the Court with{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent">
               Elite Volleyball Coaching
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-4 text-lg leading-relaxed text-slate-300 md:text-xl lg:text-2xl max-w-3xl mx-auto">
+          <p className="mt-4 text-lg leading-relaxed text-sky-100 md:text-xl lg:text-2xl max-w-3xl mx-auto">
             From Southern California standout to Collegiate star, Coach{" "}
             <span className="text-white font-semibold">Kelsey van Uden</span> brings pro-level 
             technical training to Petaluma and Santa Rosa.
@@ -71,15 +71,15 @@ export function HeroSection() {
             className="flex flex-wrap justify-center gap-4 mt-8"
           >
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Target className="h-4 w-4 text-orange-400" />
+              <Target className="h-4 w-4 text-amber-400" />
               Private 1-on-1 Sessions
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Zap className="h-4 w-4 text-orange-400" />
+              <Zap className="h-4 w-4 text-amber-400" />
               Position-Specific Training
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
-              <Trophy className="h-4 w-4 text-orange-400" />
+              <Trophy className="h-4 w-4 text-amber-400" />
               Collegiate Experience
             </div>
           </motion.div>
@@ -93,7 +93,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-orange-500 text-white hover:bg-orange-600 text-base font-bold px-8 py-6 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all"
+              className="bg-amber-400 text-sky-900 hover:bg-amber-300 text-base font-bold px-8 py-6 shadow-lg shadow-amber-400/30 hover:shadow-amber-400/50 transition-all"
               onClick={scrollToBooking}
             >
               Book Your Training
@@ -109,7 +109,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* SEO Keywords (visually subtle but present) */}
-          <p className="mt-8 text-xs text-slate-500 max-w-2xl mx-auto">
+          <p className="mt-8 text-xs text-sky-400/60 max-w-2xl mx-auto">
             Volleyball Private Lessons Petaluma • Santa Rosa Volleyball Coaching • North Bay Elite Training
           </p>
         </motion.div>

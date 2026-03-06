@@ -46,11 +46,11 @@ export function BioSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 shadow-2xl">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-700 dark:to-stone-800 shadow-2xl">
               {/* Placeholder for Coach Photo */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-6">
+                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-sky-500 to-sky-700 flex items-center justify-center mb-6">
                     <span className="text-5xl font-bold text-white">K</span>
                   </div>
                   <p className="text-slate-600 dark:text-slate-300 text-sm">
@@ -60,8 +60,8 @@ export function BioSection() {
               </div>
               
               {/* Decorative Elements */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-orange-500 rounded-xl opacity-80" />
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-slate-900 dark:bg-orange-500/30 rounded-lg" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sky-600 rounded-xl opacity-80" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-700 dark:bg-sky-500/30 rounded-lg" />
             </div>
 
             {/* Stats Card Overlay */}
@@ -73,8 +73,8 @@ export function BioSection() {
               className="absolute -bottom-6 -right-6 md:right-8 bg-white dark:bg-slate-800 rounded-xl shadow-xl p-6 border border-slate-200 dark:border-slate-700"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 rounded-full bg-sky-600/20 flex items-center justify-center">
+                  <Heart className="w-6 h-6 text-sky-600" />
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-foreground">100%</p>
@@ -93,7 +93,7 @@ export function BioSection() {
             className="space-y-8"
           >
             <div>
-              <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
                 Meet Your Coach
               </p>
               <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -134,10 +134,10 @@ export function BioSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-stone-800/50 border border-stone-200 dark:border-stone-700"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-orange-500" />
+                  <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-sky-600" />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">{item.label}</p>

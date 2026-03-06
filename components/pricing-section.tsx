@@ -77,7 +77,7 @@ export function PricingSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+          <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
             Investment in Excellence
           </p>
           <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -108,7 +108,7 @@ export function PricingSection() {
               {/* Featured Badge */}
               {pkg.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="flex items-center gap-1.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg shadow-orange-500/30">
+                  <div className="flex items-center gap-1.5 bg-gradient-to-r from-sky-600 to-sky-700 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg shadow-sky-600/30">
                     <Sparkles className="w-3.5 h-3.5" />
                     {pkg.badge}
                   </div>
@@ -117,14 +117,14 @@ export function PricingSection() {
 
               <Card className={`h-full flex flex-col transition-shadow duration-300 ${
                 pkg.featured 
-                  ? "border-orange-500 border-2 shadow-xl shadow-orange-500/10 bg-gradient-to-b from-orange-50/50 to-white dark:from-orange-950/20 dark:to-slate-900" 
+                  ? "border-sky-600 border-2 shadow-xl shadow-sky-600/10 bg-gradient-to-b from-sky-50/50 to-white dark:from-sky-950/20 dark:to-stone-900" 
                   : "border-border hover:shadow-xl"
               }`}>
                 <CardHeader className="text-center pb-4">
                   <div className={`w-14 h-14 mx-auto rounded-2xl flex items-center justify-center mb-4 ${
                     pkg.featured 
-                      ? "bg-orange-500 text-white" 
-                      : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                      ? "bg-sky-600 text-white" 
+                      : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300"
                   }`}>
                     <pkg.icon className="w-7 h-7" />
                   </div>
@@ -137,7 +137,7 @@ export function PricingSection() {
                   <div className="text-center mb-6">
                     <span className="text-5xl font-extrabold text-foreground">{pkg.price}</span>
                     <span className={`block text-sm mt-1 ${
-                      pkg.featured ? "text-orange-500 font-semibold" : "text-muted-foreground"
+                      pkg.featured ? "text-sky-600 font-semibold" : "text-muted-foreground"
                     }`}>
                       {pkg.period}
                     </span>
@@ -148,7 +148,7 @@ export function PricingSection() {
                     {pkg.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                          pkg.featured ? "text-orange-500" : "text-green-500"
+                          pkg.featured ? "text-sky-600" : "text-emerald-600"
                         }`} />
                         <span className="text-sm text-muted-foreground">{feature}</span>
                       </li>
@@ -160,8 +160,8 @@ export function PricingSection() {
                   <Button
                     className={`w-full font-bold py-6 ${
                       pkg.featured 
-                        ? "bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/30" 
-                        : "bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 dark:text-slate-900"
+                        ? "bg-sky-600 hover:bg-sky-700 text-white shadow-lg shadow-sky-600/30" 
+                        : "bg-stone-800 hover:bg-stone-700 dark:bg-white dark:hover:bg-stone-100 dark:text-stone-900"
                     }`}
                     onClick={scrollToBooking}
                   >
@@ -181,12 +181,12 @@ export function PricingSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12"
         >
-          <Card className="border-border bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-900/50 overflow-hidden">
+          <Card className="border-border bg-gradient-to-r from-stone-50 to-stone-100 dark:from-stone-800/50 dark:to-stone-900/50 overflow-hidden">
             <div className="grid md:grid-cols-2 items-center">
               <CardContent className="p-8 md:p-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-orange-500" />
+                  <div className="w-12 h-12 rounded-xl bg-sky-600/10 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-sky-600" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">Group & Team Training</h3>
@@ -211,7 +211,7 @@ export function PricingSection() {
                 </div>
                 <Button 
                   variant="outline" 
-                  className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold"
+                  className="border-sky-600 text-sky-600 hover:bg-sky-600 hover:text-white font-semibold"
                   onClick={scrollToBooking}
                 >
                   Book a Consult for Details

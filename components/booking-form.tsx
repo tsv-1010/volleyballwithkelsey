@@ -46,7 +46,7 @@ export function BookingForm() {
 
   if (isSubmitted) {
     return (
-      <section id="booking" className="py-24 md:py-32 lg:py-40 bg-slate-50 dark:bg-slate-900">
+      <section id="booking" className="py-24 md:py-32 lg:py-40 bg-stone-50 dark:bg-stone-900">
         <div className="mx-auto max-w-3xl px-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -75,7 +75,7 @@ export function BookingForm() {
   }
 
   return (
-    <section id="booking" className="py-24 md:py-32 lg:py-40 bg-slate-50 dark:bg-slate-900">
+    <section id="booking" className="py-24 md:py-32 lg:py-40 bg-stone-50 dark:bg-stone-900">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Info Side */}
@@ -85,7 +85,7 @@ export function BookingForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-orange-500 font-semibold text-sm uppercase tracking-wider mb-3">
+            <p className="text-sky-600 font-semibold text-sm uppercase tracking-wider mb-3">
               Book Your Training
             </p>
             <h2 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl mb-6">
@@ -99,8 +99,8 @@ export function BookingForm() {
             {/* Trust Indicators */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Volleyball className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                  <Volleyball className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Personalized Approach</h4>
@@ -108,8 +108,8 @@ export function BookingForm() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Calendar className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Flexible Scheduling</h4>
@@ -117,8 +117,8 @@ export function BookingForm() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                  <Star className="w-5 h-5 text-orange-500" />
+                <div className="w-10 h-10 rounded-lg bg-sky-600/10 flex items-center justify-center flex-shrink-0">
+                  <Star className="w-5 h-5 text-sky-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Quick Response</h4>
@@ -128,15 +128,15 @@ export function BookingForm() {
             </div>
 
             {/* Quick Contact Info */}
-            <Card className="bg-slate-900 dark:bg-slate-800 border-0">
+            <Card className="bg-sky-900 dark:bg-sky-800 border-0">
               <CardContent className="p-6">
                 <p className="text-white font-semibold mb-3">Need to reach out directly?</p>
-                <div className="space-y-2 text-slate-300">
-                  <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                <div className="space-y-2 text-sky-100">
+                  <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                     <PhoneIcon className="w-4 h-4" />
                     (XXX) XXX-XXXX
                   </a>
-                  <a href="mailto:kelsey@volleyballwithkelsey.com" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                  <a href="mailto:kelsey@volleyballwithkelsey.com" className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                     <MessageCircle className="w-4 h-4" />
                     kelsey@volleyballwithkelsey.com
                   </a>
@@ -282,7 +282,7 @@ export function BookingForm() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-6 shadow-lg shadow-orange-500/30"
+                    className="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-6 shadow-lg shadow-sky-600/30"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     Start Your Journey

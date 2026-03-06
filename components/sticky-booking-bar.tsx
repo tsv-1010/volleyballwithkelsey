@@ -52,7 +52,7 @@ export function StickyBookingBar() {
           className="fixed bottom-0 left-0 right-0 z-50 md:hidden"
         >
           {/* Main Bar */}
-          <div className="bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 px-4 py-3 safe-area-inset-bottom">
+          <div className="bg-sky-900/95 backdrop-blur-lg border-t border-sky-700 px-4 py-3 safe-area-inset-bottom">
             <div className="flex items-center justify-between gap-2">
               {contactOptions.map((option, index) => (
                 <a
@@ -110,7 +110,7 @@ export function DesktopQuickContact() {
       label: "Email",
       icon: Mail,
       href: "mailto:kelsey@volleyballwithkelsey.com",
-      color: "bg-orange-500 hover:bg-orange-600",
+      color: "bg-sky-600 hover:bg-sky-700",
     },
   ]
 

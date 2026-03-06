@@ -42,7 +42,7 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-sm border-b border-slate-200/50 dark:border-slate-700/50" 
+          ? "bg-white/95 dark:bg-stone-900/95 backdrop-blur-md shadow-sm border-b border-stone-200/50 dark:border-stone-700/50" 
           : "bg-transparent"
       }`}
     >
@@ -55,7 +55,7 @@ export function Navigation() {
           >
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
               isScrolled 
-                ? "bg-orange-500" 
+                ? "bg-sky-600" 
                 : "bg-white/20 backdrop-blur-sm"
             }`}>
               <Volleyball className={`w-5 h-5 ${isScrolled ? "text-white" : "text-white"}`} />
@@ -67,7 +67,7 @@ export function Navigation() {
                 Volleyball
               </span>
               <span className={`text-xs font-medium leading-tight transition-colors ${
-                isScrolled ? "text-orange-500" : "text-orange-400"
+                isScrolled ? "text-sky-600" : "text-amber-300"
               }`}>
                 with Kelsey
               </span>
@@ -80,7 +80,7 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-orange-500 ${
+                className={`text-sm font-medium transition-colors hover:text-sky-600 ${
                   isScrolled ? "text-foreground/80" : "text-white/90"
                 }`}
               >
@@ -93,7 +93,7 @@ export function Navigation() {
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors ${
                 isScrolled 
-                  ? "text-foreground/60 hover:bg-slate-100 dark:hover:bg-slate-800" 
+                  ? "text-foreground/60 hover:bg-stone-100 dark:hover:bg-stone-800" 
                   : "text-white/60 hover:bg-white/10"
               }`}
               aria-label="Toggle theme"
@@ -112,7 +112,7 @@ export function Navigation() {
             {/* CTA Button */}
             <Button
               onClick={() => scrollToSection("booking")}
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold shadow-lg shadow-orange-500/20"
+              className="bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-lg shadow-sky-600/20"
             >
               Book Training
             </Button>
@@ -147,13 +147,13 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
+        <div className="md:hidden bg-white dark:bg-stone-900 border-t border-stone-200 dark:border-stone-700">
           <div className="px-6 py-4 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-3 text-base font-medium text-foreground/80 hover:text-orange-500 border-b border-slate-100 dark:border-slate-800"
+                className="block w-full text-left py-3 text-base font-medium text-foreground/80 hover:text-sky-600 border-b border-stone-100 dark:border-stone-800"
               >
                 {item.label}
               </button>
@@ -162,7 +162,7 @@ export function Navigation() {
             <div className="pt-4">
               <Button
                 onClick={() => scrollToSection("booking")}
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-6"
+                className="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-6"
               >
                 Book Training
               </Button>
